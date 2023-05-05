@@ -11,30 +11,51 @@ function App() {
             <h2>Buttons</h2>
             <hr />
             <div className={styles['button-div']}>
-                <Button className="default" text={'Default'} disableShadow={false} />
-                <Button className="outline" text={'Default'} disableShadow={false} />
-                <Button className="text" text={'Default'} disableShadow={false} />
+                <div className={styles.label}>
+                    <p>Button</p>
+                    <Button className="default" text={'Default'} disableShadow={false} />
+                </div>
+                <div className={styles.label}>
+                    <p>Outline</p>
+                    <Button className="outline" text={'Default'} disableShadow={false} />
+                </div>
+                <div className={styles.label}>
+                    <p>Text</p>
+                    <Button className="text" text={'Default'} disableShadow={false} />
+                </div>
             </div>
             <div className={styles['button-div']}>
-                <Button
-                    className="default"
-                    text={'Default'}
-                    disableShadow={false}
-                    color="Default"
-                />
-                <Button
-                    className="default"
-                    text={'Default'}
-                    disableShadow={false}
-                    color="Primary"
-                />
-                <Button
-                    className="default"
-                    text={'Default'}
-                    disableShadow={false}
-                    color="Secondary"
-                />
-                <Button className="default" text={'Default'} disableShadow={false} color="Danger" />
+                <div className={styles.label}>
+                    <p>Button</p>
+                    <Button className="default" text={'Default'} disableShadow={false} />
+                </div>
+                <div className={styles.label}>
+                    <p>Button</p>
+                    <Button
+                        className="default"
+                        text={'Primary'}
+                        disableShadow={false}
+                        color="Primary"
+                    />
+                </div>
+                <div className={styles.label}>
+                    <p>Button</p>
+                    <Button
+                        className="default"
+                        text={'Secondary'}
+                        disableShadow={false}
+                        color="Secondary"
+                    />
+                </div>
+                <div className={styles.label}>
+                    <p>Button</p>
+                    <Button
+                        className="default"
+                        text={'Danger'}
+                        disableShadow={false}
+                        color="Danger"
+                    />
+                </div>
             </div>
             <div className={styles['button-div']}>
                 <Button
