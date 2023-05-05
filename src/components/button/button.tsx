@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 import styles from './button.module.scss';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 export interface ButtonProps {
     className?: 'default' | 'outline' | 'text';
     disable?: boolean;
@@ -9,6 +9,7 @@ export interface ButtonProps {
     sizes?: 'large' | 'medium' | 'small';
     text?: string;
     color?: 'Primary' | 'Secondary' | 'Danger' | 'Default';
+    icons?: string;
 }
 
 /**
@@ -21,6 +22,7 @@ export const Button: React.FC<ButtonProps> = ({
     disableShadow,
     iconPos,
     sizes,
+    icons,
     text,
     color,
 }: ButtonProps) => {
@@ -35,11 +37,12 @@ export const Button: React.FC<ButtonProps> = ({
         [styles.secondary]: color === 'Secondary',
         [styles.danger]: color === 'Danger',
     });
+    
     return (
         <div className={`${className}`}>
-            {/* pass in size as a prop */}
+            {/* pass in font awesome as an icon prop */}
             <button disabled={disable} className={`${classes}`}>
-                <i />
+               <FontAwesomeIcon icon={icons} />
                 {text}
             </button>
         </div>

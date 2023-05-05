@@ -8,11 +8,13 @@ export default createBoard({
     Board: () => (
         <Button
             text="Danger"
-            color="Primary"
+            color="Secondary"
             disable={false}
             disableShadow={false}
             sizes="large"
             className="default"
+            icon={'faCartShopping'}
+            icons={''}
         />
     ),
     environmentProps: {
