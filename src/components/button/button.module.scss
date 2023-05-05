@@ -1,15 +1,20 @@
 .root {
-  padding: 0em;
+  padding: 10px;
   background-color: transparent;
   border-radius: 6px;
-  border: 1px solid #3d5afe;
+  border: 0px solid #3d5afe;
   outline: none;
-  display: block;
+  display: flex;
   align-self: center;
   flex-direction: row;
+  align-content: space-between;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 10px;
 }
 .default {
-  display: block;
+  display: flex;
   align-self: center;
   height: 36px;
   margin-right: auto;
@@ -153,4 +158,10 @@
     background-color: #9a0007;
   }
   color: #faf7f7;
+}
+.left {
+  flex-direction: row;
+}
+.right {
+  flex-direction: row-reverse;
 }
