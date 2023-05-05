@@ -1,6 +1,7 @@
 import classNames from 'classnames';
 import styles from './button.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 export interface ButtonProps {
     className?: 'default' | 'outline' | 'text';
     disable?: boolean;
@@ -37,12 +38,12 @@ export const Button: React.FC<ButtonProps> = ({
         [styles.secondary]: color === 'Secondary',
         [styles.danger]: color === 'Danger',
     });
-    
+
     return (
         <div className={`${className}`}>
             {/* pass in font awesome as an icon prop */}
-            <button disabled={disable} className={`${classes}`}>
-               <FontAwesomeIcon icon={icons} />
+            <button disabled={disable} className={classNames(classes, styles.root)}>
+                <FontAwesomeIcon icon={faCartShopping} className={styles.root} />
                 {text}
             </button>
         </div>

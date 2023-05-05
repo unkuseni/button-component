@@ -1,9 +1,12 @@
 .root {
   padding: 0em;
-  background-color: #ffffff;
+  background-color: transparent;
   border-radius: 6px;
   border: 1px solid #3d5afe;
   outline: none;
+  display: block;
+  align-self: center;
+  flex-direction: row;
 }
 .default {
   display: block;
@@ -136,6 +139,9 @@
     outline: -webkit-focus-ring-color auto 0px;
     background-color: #1c313a;
   }
+  display: flex;
+  align-self: center;
+  flex-direction: row;
 }
 .danger {
   background-color: #d32f2f;
